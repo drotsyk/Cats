@@ -1,0 +1,127 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+}
+.catsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+.catsItem{
+  margin: 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  transition: 0.5s;
+  max-width: 250px;
+}
+.catsItem:hover{
+  transform: scale(1.05);
+}
+.link{
+  font-size: 50px;
+  padding: 0 30px;
+}
+button{
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+.wrapper{
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 20px;
+}
+img{
+  width: 250px;
+}
+.catInfo{
+  position: fixed;
+  top: 25%;
+  width: 270px;
+  margin: 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background-color: rgb(217, 245, 203);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+button{
+  border: 2px solid rgb(9, 109, 22);
+  background-color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+}
+li{
+  cursor: pointer;
+}
+.btn-buy{
+  margin: 30px 0 0 0;
+  transition: 0.2s;
+}
+.btn-buy:hover {
+  background-color: aliceblue;
+}
+.btn-more{
+  transition: 0.5s;
+}
+.btn-more:hover{
+  transform: scale(1.05);
+}
+.sortBar{
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+}
+.sortBar__btn{
+  margin: 0 0px 0 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.gg-arrows-v {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 10px;
+  height: 20px;
+  background:
+   linear-gradient(
+       to left,
+       currentColor 15px,transparent 0)
+       no-repeat 4px 2px/2px 6px,
+   linear-gradient(
+       to left,
+       currentColor 15px,transparent 0)
+       no-repeat 4px 12px/2px 6px
+}
+.gg-arrows-v::after,
+.gg-arrows-v::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-45deg);
+  left: 2px
+}
+.gg-arrows-v::after {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  bottom: 1px
+}
+.gg-arrows-v::before {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  top: 1px
+}
+.sortBar__title{
+  margin: 0 20px;
+}
