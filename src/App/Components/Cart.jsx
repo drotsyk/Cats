@@ -9,8 +9,7 @@ export class Cart extends React.Component {
   }
 
   priceСalculation = () => {
-    console.log('dsadas');
-    var values = [],
+    let values = [],
     keys = Object.keys(localStorage),
     i = keys.length;
     while ( i-- ) {
@@ -19,9 +18,10 @@ export class Cart extends React.Component {
     this.setState({
       arrFromLocal:values,
     })
-    for(let value of values){
+    for(let item of values){
+      console.log(item.auction.current_price);
       this.setState(state => ({
-        amount: state.amount + (value.auction.current_price / bigNubmer)
+        amount: state.amount + (item.auction.current_price / bigNubmer)
       }))
     }
   }
