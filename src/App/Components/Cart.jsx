@@ -19,7 +19,6 @@ export class Cart extends React.Component {
       arrFromLocal:values,
     })
     for(let item of values){
-      console.log(item.auction.current_price);
       this.setState(state => ({
         amount: state.amount + (item.auction.current_price / bigNubmer)
       }))
@@ -63,7 +62,11 @@ export class Cart extends React.Component {
               <li key={index} className='catsItem'>
                 <img src={cat.image_url} alt=""/>
                 <div><b>Age:</b> {cat.id}</div>
-                <div><b>Name:</b> {cat.name}</div>
+                {cat.name === null ? (
+                  <div>Name: Tramp</div>
+                ): (
+                  <div>Name: {cat.name}</div>
+                )}
                 <div><b>Price: </b>{
                   (cat.auction.current_price / bigNubmer).toFixed(3).replace(/\.?0+$/, '')
                 }
